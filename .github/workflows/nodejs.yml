@@ -2,8 +2,8 @@ name: LINE notify
 
 on:
   push:
-    branches: [ master ]
-    # プッシュ時に動作する
+  - cron:  '*/5 * * * *'
+  # 5分ごと # ここだけ変更
 
 jobs:
   build:
