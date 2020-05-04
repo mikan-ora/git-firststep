@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <title>Hello My WebSite!</title>
+    <link rel=”stylesheet” href=”style.css”>
+  </head>
+  <body>
+    <p>Covit-19統計情報</p>
+    <image sec="https://1.bp.blogspot.com/-q0vC8T9XRSg/XiOwuwtXJLI/AAAAAAABXHk/clxgC9d2E8YrWluWTw0NFYP832mEMdN-ACNcBGAsYHQ/s1600/virus_corona.png">
+    <p>世界</p>
+
+    <div id="app">
+        {{ message }}
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+        const app = new Vue({
+            el: '#app',
+            data: {
+                message: 'Hello Vue!'
+            },
+
+            methods: {
+                getData: async function(){
+                    const response = await axios.get('https://api.covid19api.com/country/japan/status/confirmed')
+                    console.log(response.data);
+                    this.message = response.data
+                },
+            },
+
+            mounted: function(){
+                this.getData();
+            }
+        })
+    </script>
+  </body>
+</html>
