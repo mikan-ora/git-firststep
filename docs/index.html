@@ -1,18 +1,22 @@
 <html>
-    <head>
-        <title>Hello My WebSite!</title>
-        <style>
-            p {
-              color:darkorange;
-            }
-          </style>
-    </head>
-  
+  <head>
+    <title>Hello My WebSite!</title>
+  </head>
   <body>
-    <p>Mika Ishikawa</p>
-    <ul>
-        <li>レベル：初心者</li>
-        <li>実現したいこと：ちょっとしたカスタマイズを自分でできるようになりたい</li>
-    </ul>
-    </body>
+    <p>Hello, ProtoOut!</p>
+
+    <div id="app">
+        {{ message }}
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        const app = new Vue({
+            el: '#app',
+            data: {
+                message: 'Hello Vue!'
+            }
+        })
+    </script>
+  </body>
 </html>
