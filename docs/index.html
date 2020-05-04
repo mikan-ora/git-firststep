@@ -22,7 +22,7 @@
                 getData: async function(){
                     const response = await axios.get('https://api.covid19api.com/country/japan/status/confirmed')
                     console.log(response.data);
-                    this.message = response.data.Global
+                    this.message = response.data
                 },
             },
 
