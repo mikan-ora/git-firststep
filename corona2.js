@@ -21,7 +21,7 @@ async function getRequest() {
     html = html.replace(/\r?\n/g, ""); //整形1: 改行などを削除して整形しやすくする
 
     //運行情報
-    let unko = html.match(/id="crumb"(.*?)<\/section>/)[1];
+    let unko = html.match(/class="about_sub__status__result--amount"(.*?)<\/section>/)[1];
     unko = unko.replace(/<("[^"]*"|'[^']*'|[^'">])*>/g, ""); //整形2: タグを削除
     unko = unko.match(/寄付総額(.*?)円/g)
     console.log(unko);
