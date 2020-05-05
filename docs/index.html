@@ -13,8 +13,30 @@
     </iframe>
     <h2>募金活動</h2>
         <div class="box1">
-             <p>募金1</p>
-        </div>
+             <p>募金1{{message[0]}}</p>
+             <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+             <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+             <script>
+                 const app = new Vue({
+                     el: '#app',
+                     data: {
+                         message: []
+                     },
+         
+                     methods: {
+                         getData: async function(){
+                             const response = await axios.get('data.json')
+                             console.log(response.data);
+                             this.message = response.data
+                         },
+                     },
+         
+                     mounted: function(){
+                         this.getData();
+                     }
+                 })
+             </script>
+            </div>
         <div class="box1">
             <p>募金2</p>
         </div>
