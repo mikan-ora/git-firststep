@@ -9,12 +9,13 @@ h1 {
     background: -webkit-linear-gradient(#ffb03c, #ff708d);
     background: linear-gradient(to right, #ffb03c, #ff708d);
     color: #FFF;
-    width:100px;
-    height:100px;
+    width:200px;
+    height:200px;
     float: left;
+    margin: 20px; 
 }
 div.box1 p {
-    margin: 20px; 
+
     padding: 20px;
 }
 
