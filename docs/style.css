@@ -3,10 +3,14 @@ h1 {
     background-color:cornflowerblue;
   }
 
-.circle1 {
-   height:50px;
-   width:50px;
-   border-radius:50%;
-   line-height:50px;
-   text-align:center;
-  }
+div.box1{
+    padding: 0.5em 1em;
+    background: -moz-linear-gradient(#ffb03c, #ff708d);
+    background: -webkit-linear-gradient(#ffb03c, #ff708d);
+    background: linear-gradient(to right, #ffb03c, #ff708d);
+    color: #FFF;
+}
+div.box1 p {
+    margin: 0; 
+    padding: 0;
+}
