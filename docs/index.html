@@ -12,17 +12,33 @@
     src="https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6">
     </iframe>
     <h2>ニュース</h2>
-    <h>世界</h3>
-   
-   <script>
-        var url = 'http://newsapi.org/v2/top-headlines?' +
-          'country=us&' +
-          'apiKey=bf32861727084ec6b0851a0f7ab8f22c';
-        var req = new Request(url);
-        fetch(req)
-        .then(function(response) {
-        console.log(response.json());
-        })
-    </script>   
+        <div id="app">
+            {{ message }}
+        </div>
+    
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script>
+            const app = new Vue({
+                el: '#app',
+                data: {
+                    message: 'Hello Vue!'
+                },
+    
+                methods: {
+                    getData: async function(){
+                        const response = await axios.get('http://newsapi.org/v2/top-headlines?' +
+                            'country=us&' +
+                            'apiKey=bf32861727084ec6b0851a0f7ab8f22c';)
+                        console.log(response.data);
+                        this.message = response.data
+                    },
+                },
+    
+                mounted: function(){
+                    this.getData();
+                }
+            })
+        </script> 
 </body>
 </html>
