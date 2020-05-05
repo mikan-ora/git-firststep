@@ -4,6 +4,7 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
+    <div id="app">
     <h1>Covit-19情報</h1>
     <iframe id="JohnsHopkinsUnv"
     title="JohnsHopkinsUnv"
@@ -12,7 +13,6 @@
     src="https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6">
     </iframe>
     <h2>募金活動</h2>
-    <div id="app">
         <div class="box1">
              <p>Yahoo!基金{{message[0]}}</p>
         </div>
@@ -25,8 +25,10 @@
         <div class="box1">
             <p>あしなが育英会{{message[3]}}</p>
         </div>
-
-    <h2>ニュース</h2>  
+    <div>
+    <h2>ニュース</h2> 
+    </div> 
+    </div> 
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
         <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
         <script>
