@@ -27,9 +27,7 @@
     
                 methods: {
                     getData: async function(){
-                        const response = await axios.get('http://newsapi.org/v2/top-headlines?' +
-                            'country=us&' +
-                            'apiKey=bf32861727084ec6b0851a0f7ab8f22c';)
+                        const response = await axios.get('https://chroniclingamerica.loc.gov/search/titles/results/?terms=michigan&format=json&page=5')
                         console.log(response.data);
                         this.message = response.data
                     },
