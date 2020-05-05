@@ -8,8 +8,8 @@
     <h2>世界の感染状況</h2>
     <iframe id="JohnsHopkinsUnv"
     title="JohnsHopkinsUnv"
-    width="300"
-    height="200"
+    width="800"
+    height="300"
     src="https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6">
     <h2>ニュース</h2>
     <h3>世界</h3>
@@ -28,7 +28,7 @@
 
             methods: {
                 getData: async function(){
-                    const response = await axios.get('https://api.covid19api.com/country/japan/status/confirmed')
+                    const response = await axios.get('http://newsapi.org/v2/top-headlines?')
                     console.log(response.data);
                     this.message = response.data
                 },
