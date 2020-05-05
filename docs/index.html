@@ -10,9 +10,11 @@
     width="1200"
     height="500"
     src="https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6">
+   
     <h2>ニュース</h2>
     <h3>世界</h3>
-    <script>
+   
+   <script>
         var url = 'http://newsapi.org/v2/top-headlines?' +
           'country=us&' +
           'apiKey=bf32861727084ec6b0851a0f7ab8f22c';
@@ -21,14 +23,6 @@
         .then(function(response) {
         console.log(response.json());
         })
-    </script>    
-    <h3>日本</h3>
-       <ul>
-        <li>手を洗う</li>
-        <li>不要不急の外出はしない</li>
-        <li>3密を避ける</li>
-    </ul>
-    <p>リモートワーク導入状況</p>
-
+    </script>   
 </body>
 </html>
