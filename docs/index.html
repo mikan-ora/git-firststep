@@ -14,29 +14,7 @@
     <h2>募金活動</h2>
         <div class="box1">
              <p>募金1{{message[0]}}</p>
-             <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-             <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-             <script>
-                 const app = new Vue({
-                     el: '#app',
-                     data: {
-                         message: []
-                     },
-         
-                     methods: {
-                         getData: async function(){
-                             const response = await axios.get('data.json')
-                             console.log(response.data);
-                             this.message = response.data
-                         },
-                     },
-         
-                     mounted: function(){
-                         this.getData();
-                     }
-                 })
-             </script>
-            </div>
+        </div>
         <div class="box1">
             <p>募金2</p>
         </div>
@@ -64,9 +42,10 @@
     
                 methods: {
                     getData: async function(){
-                        const response = await axios.get('https://chroniclingamerica.loc.gov/search/titles/results/?terms=michigan&format=json&page=5')
+                        const response = await axios.get('data.json')
                         console.log(response.data);
                         this.message = response.data
+                        console.log(response.data, typeof(response.data))
                     },
                 },
     
